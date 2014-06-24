@@ -1,0 +1,6 @@
+# Twitter OAuth2 settings
+test_value: abc
+consumer_key: <OAuth2 consumer key>
+consumer_secret: <OAuth2 consumer secret>
+oauth_token: <OAuth2 access token>
+oauth_token_secret: <OAuth2 access token secret>

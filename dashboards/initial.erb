@@ -1,0 +1,57 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-hrgLSq1Rl2V8XCZK7gg7qkzsj1pGeVk&sensor=false&libraries=visualization"></script>
+
+<script type='text/javascript'>
+$(function() {
+  // These settings override the defaults set in application.coffee. You can do this on a per dashboard basis.
+  Dashing.widget_base_dimensions = [370, 340]
+  Dashing.numColumns = 4
+});
+$(function() {
+  $('li').live('click', function(e){
+    var widget = $(this).find('.widget');
+    var url = widget.data('url');
+    window.location = url;
+  });
+});
+</script>
+
+
+<% content_for :title do %>Super Sweet Dashboard<% end %>
+
+<div class="gridster">
+  <ul>
+  
+   <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="clock" data-view="Clock" data-url="http://dashing.io"></div>
+      <i class="icon-time icon-background"></i>
+    </li>
+       
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <div data-id="yahoo_stock_quote" data-view="Stock" data-prefix="$" data-url="http://www.eia.gov/todayinenergy/prices.cfm"></div>
+	</li>  
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+      <div data-id="synergy" data-view="Meter" data-title="Estimated % Complete" data-min="0" data-max="100" data-moreinfo="Project ..." data-url="http://people.cis.ksu.edu/~dmcase/todo5/todo5.html"></div>
+    </li>
+    
+
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
+      <div data-id="buzzwords" data-view="List" data-unordered="true" data-title="Today's Counts" data-moreinfo="current count" data-url="http://www.infocaptor.com/dashboard/dashboard-and-business-intelligence-competitors-evaluated-based-on-their-front-page-content"></div>
+    </li>
+    
+ 
+    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        <div data-id="twitter_mentions" data-view="Comments" data-title="Analytics In The News" style="background-color: #71388a" data-moreinfo="click to see" data-url="https://www.google.com/search?q=%22smart+analytics%22+%22Black+%26+Veatch%22&oq=%22smart+analytics%22+%22Black+%26+Veatch%22&aqs=chrome..69i57.1417j0j8&sourceid=chrome&es_sm=93&ie=UTF-8"></div>
+	</li>
+
+    <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
+        <div data-id="heatmap" data-view="Heatmap" data-title="Recent Earthquakes" data-url="http://maps.google.com/gallery/details?id=z4f-ZuCLmiKg.kjEKRL8AzeQM&hl=en"></div>
+	</li>
+	
+	  <li data-row="1" data-col="1" data-sizex="4" data-sizey="1">
+        <div data-id="weatheroutlook" data-view="Weatheroutlook"data-url="http://www.wunderground.com/weather-forecast/US/KS/Manhattan.html"></div>
+	</li>
+	
+	
+  </ul>
+ 

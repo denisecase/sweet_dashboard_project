@@ -1,0 +1,7 @@
+*DS_STORE
+history.yml
+config.yaml
+.env
+.bundle
+log
+friendly_error_dump.txt
